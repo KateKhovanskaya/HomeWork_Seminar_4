@@ -17,15 +17,26 @@
 // }
 
 //Задача 27:Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-Console.WriteLine("Введите число: ");
-int num27=int.Parse(Console.ReadLine()!);
-Console.WriteLine($"Сумма цифр числа {num27}: {SumNumbers(num27)}");
-//Сумма цифр в числе
-int SumNumbers(int num){
-    int sum=0;
-    while(num>0){
-        sum+=num%10;
-        num=num/10;
+// Console.WriteLine("Введите число: ");
+// int num27=int.Parse(Console.ReadLine()!);
+// Console.WriteLine($"Сумма цифр числа {num27}: {SumNumbers(num27)}");
+// //Сумма цифр в числе
+// int SumNumbers(int num){
+//     int sum=0;
+//     while(num>0){
+//         sum+=num%10;
+//         num=num/10;
+//     }
+//     return sum;
+// }
+
+//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+Console.Write($"[{String.Join(",", RandomArray(8))}]");
+//Заполнение массивыа случайными числами
+int[] RandomArray(int size){
+    int[] arr=new int[size];
+    for(int i=0; i<size;i++){
+        arr[i]=new Random().Next(0,1001);
     }
-    return sum;
+    return arr;
 }
